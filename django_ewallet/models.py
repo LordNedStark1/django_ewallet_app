@@ -6,9 +6,9 @@ from AppBuild import settings
 
 
 class Wallet(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, primary_key=True)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
     accountNumber = models.CharField(max_length=10, primary_key=True)
-    balance = models.DecimalField(decimal_places=2)
+    balance = models.DecimalField(decimal_places=2,max_digits=9)
 
 
 class Transaction(models.Model):

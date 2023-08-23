@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 
 
-import User.models
-
 # django_ewallet paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djoser',
+    'User',
+    'django_ewallet'
 ]
 
 MIDDLEWARE = [
@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'AppBuild.wsgi.application'
 
-AUTH_USER_MODEL = User.models.User
+AUTH_USER_MODEL = "User.User"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
