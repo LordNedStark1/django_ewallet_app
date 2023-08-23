@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'djoser',
     'User',
     'django_ewallet'
+
 ]
 
 MIDDLEWARE = [
