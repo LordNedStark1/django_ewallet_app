@@ -14,3 +14,8 @@ class UserSerializer(serializers.Serializer):
 class CurrentUserSerializer(UserSerializer):
     class Meta(UserSerializer.Meta):
         fields = ['id', 'username', 'email', 'first_name', 'last_name']
+
+class CreateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'phone_number']

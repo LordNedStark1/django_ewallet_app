@@ -17,3 +17,9 @@ class TransactionSerializer(serializers.ModelSerializer):
         fields = ['status', 'type', 'date_time', 'amount', 'wallet', 'reference_number']
 
 
+class CreateTransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = ['type', 'status', 'amount', 'wallet']
+
+
